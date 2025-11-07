@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.14.0 on win32)" generated="2025-11-08T01:26:00.325370" rpa="false" schemaversion="5">
+<suite id="s1" name="Saucedemo Checkout" source="C:\robot_projects\saucedemo_test\tests\saucedemo_checkout.robot">
+<test id="s1-t1" name="User Journey - Successful Checkout" line="9">
+<kw name="Open Browser To Login Page" owner="keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-11-08T01:26:00.732576" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-11-08T01:26:00.732231" elapsed="9.214638"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-11-08T01:26:09.947177" elapsed="0.049022"/>
+</kw>
+<status status="PASS" start="2025-11-08T01:26:00.731326" elapsed="9.265134"/>
+</kw>
+<kw name="Given User is logged into SauceDemo" owner="keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-08T01:26:09.997924" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<arg>id=user-name</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-08T01:26:09.997446" elapsed="0.263157"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-08T01:26:10.261281" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-08T01:26:10.260918" elapsed="0.130378"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-11-08T01:26:10.392292" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>id=login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-08T01:26:10.391728" elapsed="0.176076"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css=.inventory_list</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-08T01:26:10.568164" elapsed="0.039550"/>
+</kw>
+<status status="PASS" start="2025-11-08T01:26:09.997048" elapsed="0.610903"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-11-08T01:26:10.608556" elapsed="2.379467"/>
+</kw>
+<tag>Checkout</tag>
+<tag>Regression</tag>
+<status status="PASS" start="2025-11-08T01:26:00.730260" elapsed="12.258499"/>
+</test>
+<doc>Automated checkout journey test on saucedemo.com</doc>
+<status status="PASS" start="2025-11-08T01:26:00.328020" elapsed="12.663700"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Checkout</stat>
+<stat pass="1" fail="0" skip="0">Regression</stat>
+</tag>
+<suite>
+<stat name="Saucedemo Checkout" id="s1" pass="1" fail="0" skip="0">Saucedemo Checkout</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
